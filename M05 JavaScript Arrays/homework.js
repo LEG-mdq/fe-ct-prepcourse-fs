@@ -120,6 +120,12 @@ function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad
    // de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   var cant=0;
+   for (let index = 0; index < array.length; index++) {
+      if (array[index]>18) {
+      cant++
+      }
+   }return cant;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -130,18 +136,31 @@ function diaDeLaSemana(numeroDeDia) {
    // si el día corresponde a "Sábado" o "Domingo", y 
    // "Es dia laboral" en caso contrario.
    // Tu código:
+   if (numeroDeDia===1||numeroDeDia===7) {
+      return "Es fin de semana"
+   } else {
+      return "Es dia laboral"
+   }
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
-   // Debe retornar true si el entero inicia con 9 y false en otro caso.
+   // Debe retornar true si el entero inicia con 9 
+   // y false en otro caso.
    // Tu código:
+   var par = num.toString();
+   return par[0]==='9';
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   for (var i = 0; i < array.length -1; i++) {
+      if (array[i] !== array[i+1]){
+         return false
+      }
+   }return true
 }
 
 function mesesDelAño(array) {
@@ -149,6 +168,17 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   var arrayN = [];
+   for (var i = 0; i < array.length; i++) {
+      if ( array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre"){
+         arrayN.push(array[i])
+      }
+   }
+   if (arrayN.length <3){
+      return "No se encontraron los meses pedidos"
+   } else {
+      return arrayN;
+   }
 }
 
 function tablaDelSeis() {
