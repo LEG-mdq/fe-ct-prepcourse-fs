@@ -15,10 +15,7 @@ function crearGato(nombre, edad) {
       }
    }; return gato;
 }  
-let tom = crearGato("Tom", 2)
-console.log(tom.nombre);
-console.log(tom.edad);
-console.log(tom.meow());
+
 
 function nuevoUsuario(nombre, email, password) {
    // Debes crear un nuevo objeto.
