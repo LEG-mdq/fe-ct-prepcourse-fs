@@ -168,16 +168,16 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   var arrayN = [];
+   var meses = [];
    for (var i = 0; i < array.length; i++) {
       if ( array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre"){
-         arrayN.push(array[i])
+      meses.push(array[i])
       }
    }
-   if (arrayN.length <3){
+   if (meses.length <3){
       return "No se encontraron los meses pedidos"
    } else {
-      return arrayN;
+      return meses;
    }
 }
 
@@ -185,12 +185,22 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var tabla=[];
+   for (var i=0; i <11; i++){
+      tabla[i]=6*i
+   } return tabla;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   var mayor100=[];
+   for (var i = 0; i < array.length; i++) {
+      if (array[i]>100){
+         mayor100.push(array[i]);
+      } 
+   } return mayor100;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -204,8 +214,24 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+      var aumentarEn2=[];
+      var suma=num;
+      for (var i=0; i<10;i++){
+         suma =suma+2
+         if (suma===i)break;
+         else {
+            aumentarEn2.push(suma)
+         }
+      }
+      if (i<10){
+         return "Se interrumpió la ejecución";
+      } else {
+         return aumentarEn2;
+      }
 }
+      console.log(breakStatement(-2));
 
+      
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
    // Guardar cada nuevo valor en un array y retornarlo.
@@ -213,6 +239,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var aumentarEn2=[];
+   var suma = num;
+   for (var i =0; i<10; i++){
+      if (i===5) continue;
+      else{
+         suma+=2
+         aumentarEn2.push(suma);
+      }
+   }
+      return aumentarEn2;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
